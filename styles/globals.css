@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.metaportal_fn_leftnav .nav_holder .active ~ .sub-menu {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.metaportal_fn_leftnav .nav_holder .active ~ .sub-menu::-webkit-scrollbar {
+  width: 0px;
+}
+#ripple {
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.quantity-input {
+  width: 100%; /* Use 100% width for better responsiveness */
+  max-width: 120px; /* Set a maximum width to ensure it doesn't get too big */
+  text-align: center;
+  padding: 8px 10px; /* Adjust padding for a larger click area and better visibility */
+  margin: 0 10px; /* Space between buttons and input */
+  border: 1px solid #ccc; /* Basic border styling */
+  border-radius: 4px; /* Rounded corners for the input field */
+  font-size: 16px; /* Increase font size for better readability */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  -webkit-appearance: none; /* Disable platform-native styling on iOS */
+}
+
+/* Responsive media query for smaller devices */
+@media (max-width: 600px) {
+  .quantity-input {
+    max-width: 100px; /* Smaller max width on small devices */
+    padding: 8px 5px;
+    font-size: 14px; /* Slightly smaller font size on small devices */
+  }
+}
+
+/* Style for decrease and increase buttons to match input size */
+.decrease,
+.increase {
+  padding: 8px 10px; /* Match the height of the input field */
+  font-size: 16px; /* Match font size of the input field */
+  border: none; /* Optional: removes the border */
+  background: transparent; /* Optional: sets the background to transparent */
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .decrease,
+  .increase {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+}
+/* This assumes you have a class 'wallet' wrapping the ConnectButton */
+.wallet .rainbowkit-button {
+  /* Your custom styles here */
+  background: #fff; /* Example: change background color */
+  color: #333; /* Example: change text color */
+  border-radius: 4px; /* Example: add border-radius */
+  /* Add other styles like padding, font size, etc., as needed */
+}
+
+/* Adjust the width to match your other navigation items */
+.wallet .rainbowkit-button {
+  min-width: 150px; /* Example: set a minimum width */
+  padding: 10px 20px; /* Example: adjust padding */
+}
